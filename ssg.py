@@ -1,5 +1,6 @@
 import typer
 from ssg.site import Site
+import ssg.parsers 
 
 
 def main(self, source="content", dest="dist"):
