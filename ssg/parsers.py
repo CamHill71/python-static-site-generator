@@ -20,4 +20,4 @@ class Parser():
 
     def parse(self,path,source,dest):
         """ """
-        raise NotImplementedError
+        raise NotImplementedError()
