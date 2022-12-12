@@ -54,3 +54,7 @@ class Content(Mapping):
     def __len__(self):
         """ """
         return len(self.data)
+
+    def __repr__(self) -> str:
+        data = {}
+        return str(data)  
