@@ -9,6 +9,10 @@ Created on Mon Dec 12 08:25:40 2022
 from typing import List
 from pathlib import Path
 import shutil
+import sys
+from docutils.core import publish_parts
+from markdown import markdown
+from ssg.content import Content
 
 
 class Parser():
@@ -49,4 +53,10 @@ class ResourceParser(Parser):
         self.copy(path,source,dest)
        
 
-    
+class MarkdownParser(Parser):
+    """ """
+    extensions = [".md",".markdown"]
+
+    def parse(self, path: Path, source: Path, dest: Path):
+        content = Content.load(self.read(path))
+        return 
