@@ -20,8 +20,8 @@ class Site():
         """ """
         self.dest.mkdir(self.dest,parents=True,exist_ok=True)
 
-        for dir in self.source.rglob("*"):
-            if Path.is_dir(dir):
-                self.create_dir(dir)
+        for path in self.source.rglob("*"):
+            if path.is_dir():
+                self.create_dir(path)
 
 
