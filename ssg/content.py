@@ -19,10 +19,10 @@ class Content(Mapping):
     __regex = re.compile(__delimiter,re.MULTILINE)
 
     @classmethod
-    def load(self,cls,string):
+    def load(cls,string):
         """ """
-        _,fm,content =self.__regex.split(string,2)
+        _,fm,content = cls.__regex.split(string,2)
 
         metadata = load(fm,FullLoader)
 
-        return cls(metadata,content)
+        return cls     (metadata,content)
