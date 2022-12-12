@@ -8,6 +8,7 @@ Created on Mon Dec 12 08:25:40 2022
 
 from typing import List
 from pathlib import Path
+import shutil
 
 
 class Parser():
@@ -33,4 +34,8 @@ class Parser():
 
         with open(full_path,'w') as file:
             file.write(content)
+
+    def copy(self,path,source,dest):
+        """ """     
+        shutil.copy2(path, dest / path.reative_to(source))     
 
