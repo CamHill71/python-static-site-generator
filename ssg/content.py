@@ -63,3 +63,7 @@ class Content(Mapping):
                 data[key] = value
 
         return str(data)  
+
+    def __iter__(self):
+        """"""
+        self.data.__iter__()
